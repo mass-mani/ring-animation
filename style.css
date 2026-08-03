@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.hand{
+    width:320px;
+    animation:wiggle 0.4s ease-in-out infinite alternate;
+    transform-origin:bottom center;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.hand:hover{
+    transform:scale(1.05);
+}
+
+@keyframes wiggle{
+    0%{
+        transform:rotate(-8deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(0deg) translateY(-8px);
+    }
+
+    100%{
+        transform:rotate(8deg) translateY(0);
+    }
+}
